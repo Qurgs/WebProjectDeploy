@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "CinemaGo/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "CinemaGo/wsgi.py"
+      }
+    ]
+}
