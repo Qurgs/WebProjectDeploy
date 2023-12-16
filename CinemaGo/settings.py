@@ -55,7 +55,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "CinemaGo.wsgi.application"
+WSGI_APPLICATION = "CinemaGo.wsgi.app"
 
 
 # Database
