@@ -22,7 +22,6 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('', welcome, name='welcome_page'),
-    path('typing_game/', typing_game, name='typing_game'),
     path("admin/", admin.site.urls),
     path('api/v1/', include('Cinema.urls')),
     path('api/v1/', include('Review.urls')),
@@ -32,3 +31,7 @@ urlpatterns = [
          name='schema-swagger-ui'
          ),
 ]
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
