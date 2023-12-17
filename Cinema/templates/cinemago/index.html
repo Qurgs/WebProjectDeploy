@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>NURDAN-PJ50</title>
+    <audio id="hoverSound" preload="auto" src="https://www.101soundboards.com/storage/board_sounds_rendered/730366.mp3" type="audio/mp3"></audio>
     <link rel="stylesheet" href="{% static 'cinema/css/style.css' %}">
 </head>
 <style>
@@ -51,6 +52,25 @@ h1 {
 <body>
   <h1>From you, 2000 year ago,</h1>
   <h1>To you, 2000 year from now...</h1>
-  <div id="bottomRightText">Attack On Titan, 2023</div>
+  <div id="bottomRightText">Attack On Titan, 2023
+  </div>
+  <button id="myButton">userov</button>
+  <audio id="hoverSound" preload="auto" src="https://www.101soundboards.com/storage/board_sounds_rendered/730366.mp3" type="audio/mp3"></audio>
+  
+  <script>
+      var button = document.getElementById('myButton');
+      var sound = document.getElementById('hoverSound');
+  
+      sound.load();
+  
+      function playSound() {
+          if (sound.readyState >= 2) {
+              sound.play();
+          }
+      }
+  
+      button.addEventListener('mouseenter', playSound);
+      button.addEventListener('click', playSound);
+  </script>
 </body>
 </html>
