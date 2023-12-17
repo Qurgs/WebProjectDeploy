@@ -11,6 +11,9 @@ from django.shortcuts import render
 def welcome(request):
     return render(request, 'cinemago/index.html')
 
+def typing_game(reqeust):
+    return render(reqeust, 'cinemago/typing_game.html')
+
 
 class MoviePagination(PageNumberPagination):
     page_size = 2

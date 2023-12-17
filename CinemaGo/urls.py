@@ -3,7 +3,7 @@ from django.urls import include, path, re_path
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
-from Cinema.views import welcome
+from Cinema.views import welcome, typing_game
 
 
 schema_view = get_schema_view(
@@ -22,6 +22,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('', welcome, name='welcome_page'),
+    path('typing_game/', typing_game, name='typing_game'),
     path("admin/", admin.site.urls),
     path('api/v1/', include('Cinema.urls')),
     path('api/v1/', include('Review.urls')),
